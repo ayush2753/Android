@@ -20,7 +20,7 @@ class LoginController extends GetxController{
       final response = await http.post(Uri.parse("https://reqres.in/api/login"),
           body: {
             "email" : emailController.value.text,
-            "password" : passwordController.value.text
+            "password" : passwordController.value.text.toString()
           });
 
       var data = jsonDecode(response.body);
